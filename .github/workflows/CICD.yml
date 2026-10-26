@@ -1,30 +1,33 @@
-name: 
-on: 
- workflow_dispatch:
 
+name: CI-CD-Pipeline
 
+on:
+  workflow_dispatch:
 
 jobs:
   code:
     runs-on: ubuntu-latest
     steps:
-      - name: clone the code
+      - name: Clone the code
         run: echo "build the code"
+
   build:
+    needs: [code]
     runs-on: ubuntu-latest
     steps:
-      - name: build using docker
+      - name: Build using Docker
         run: echo "building the docker"
+
   test:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
-      - name: running the cases
+      - name: Running the test cases
         run: echo "testing the app"
 
   deploy:
+    needs: [build, test]
     runs-on: ubuntu-latest
     steps:
-      - name: deploy on the machine
-        run: echo " deployinh the code"
-        
-       
+      - name: Deploy on the machine
+        run: echo "deploying the code"
