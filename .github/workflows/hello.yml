@@ -13,8 +13,9 @@ jobs:
   say-hello:
      runs-on: ubuntu-latest
      steps:
-       - name: say to hello everyone
-       run: echo "hello dosto"
+       - name: say to hello everyone 
+         run: echo "hello dodto"
+    
 
      
    
