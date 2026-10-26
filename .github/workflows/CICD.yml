@@ -1,0 +1,30 @@
+name: 
+on: 
+ workflow_dispatch:
+
+
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone the code
+        run: echo "build the code"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build using docker
+        run: echo "building the docker"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: running the cases
+        run: echo "testing the app"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy on the machine
+        run: echo " deployinh the code"
+        
+       
