@@ -1,0 +1,31 @@
+# workflows
+# should have name
+
+name : hello
+
+# on tells when workflow runs (give indentation by tab)
+on :
+  workflow_dispatch: 
+
+  # Jobs
+# should be inside wokrflow
+jobs:
+  say-hello:
+     runs-on: ubuntu-latest
+     steps:
+       - name: say to hello everyone
+       run: echo "hello dosto"
+
+     
+   
+
+
+
+  
+
+
+# Steps
+# should be inside the jobs
+
+# Action
+# should be inside Steps
