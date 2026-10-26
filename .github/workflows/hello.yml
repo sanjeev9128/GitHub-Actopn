@@ -13,10 +13,8 @@ jobs:
   say-hello:
      runs-on: ubuntu-latest
      steps:
-        - name: say to hello everyone 
-         run: echo "hello dodto"
-       
-    
+       - name: say to hello   
+         run: echo " hello dosto"
 
      
    
